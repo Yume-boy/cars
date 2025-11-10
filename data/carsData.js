@@ -10,7 +10,7 @@ export const carsData = [
     mileage: "45,000 km",
     fuelType: "Petrol",
     transmission: "Automatic",
-    verified: true,
+    verified: false,
     featured: true,
     image: "https://images.pexels.com/photos/1592384/pexels-photo-1592384.jpeg",
     images: [

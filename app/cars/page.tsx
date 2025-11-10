@@ -44,7 +44,7 @@ export default function CarsPage() {
         >
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Browse Our Cars</h1>
           <p className="text-gray-600 text-lg">
-            Discover {filteredCars.length} verified vehicles ready for you
+            Discover {filteredCars.length} vehicles ready for you
           </p>
         </motion.div>
 

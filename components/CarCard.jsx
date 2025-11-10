@@ -35,7 +35,7 @@ export default function CarCard({ car }) {
 
         <div className="p-5">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{car.name}</h3>
-          <p className="text-2xl font-bold text-orange-600 mb-4">
+          <p className="text-xl font-bold text-orange-600 mb-4">
             ₦{car.price.toLocaleString()}
           </p>
 
@@ -55,7 +55,7 @@ export default function CarCard({ car }) {
           </div>
 
           <div className="mt-4 pt-4 border-t border-gray-100">
-            <span className="text-orange-600 font-medium group-hover:underline">
+            <span className="text-gray-600 font-medium group-hover:underline">
               View Details →
             </span>
           </div>

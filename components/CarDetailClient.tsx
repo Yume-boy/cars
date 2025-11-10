@@ -2,8 +2,9 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, MapPin, Gauge, Fuel, Calendar, Settings, ChevronLeft, ChevronRight, Phone, Mail } from 'lucide-react';
+import { CheckCircle, MapPin, Gauge, Fuel, Calendar, Settings, ChevronLeft, ChevronRight, Phone, Mail,  } from 'lucide-react';
 import Link from 'next/link';
+import WhatsAppIcon from './ui/WhatsappIcon';
 import CarCard from '@/components/CarCard';
 
 interface Car {
@@ -177,13 +178,14 @@ export default function CarDetailClient({ car, similarCars }: Props) {
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition-colors"
                 >
                   <Phone className="w-5 h-5" />
-                  Call Now
+                  Call Us Now
                 </a>
                 <Link
-                  href="/contact"
+                  href="https://wa.me/2347062257847?text=Hello%20Filitech!%20I%27m%20interested%20in%20a%20car."
                   className="flex items-center justify-center gap-2 px-6 py-3 bg-white text-orange-600 border-2 border-orange-600 rounded-lg font-semibold hover:bg-orange-50 transition-colors"
                 >
-                  <Mail className="w-5 h-5" />
+                  <WhatsAppIcon size={28} color="#25D366" />
+                  {/* <Mail className="w-5 h-5" /> */}
                   Book Inspection
                 </Link>
               </div>

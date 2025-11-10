@@ -25,9 +25,9 @@ export default function Navbar() {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              <Car className="w-8 h-8 text-orange-600" />
+              {/* <Car className="w-8 h-8 text-orange-600" strokeWidth={1}/> */}
             </motion.div>
-            <span className="text-xl font-bold text-gray-900">VerifiedAutos</span>
+            <span className="text-xl font-bold text-gray-900">Filitech Autos</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

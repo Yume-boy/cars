@@ -55,7 +55,7 @@ export default function Home() {
 
   return (
     <div className="pt-16">
-      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-orange-50 overflow-hidden">
+      <section className="relative min-h-[90vh] flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmOTczMTYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDE0YzMuMzE0IDAgNiAyLjY4NiA2IDZzLTIuNjg2IDYtNiA2LTYtMi42ODYtNi02IDIuNjg2LTYgNi02ek0zNiAzNGMzLjMxNCAwIDYgMi42ODYgNiA2cy0yLjY4NiA2LTYgNi02LTIuNjg2LTYtNiAyLjY4Ni02IDYtNnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-40"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
@@ -65,8 +65,8 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6">
-              Find Your Perfect
-              <span className="block text-orange-600 mt-2">Verified Car</span>
+              Find The Perfect Car
+              <span className="block text-orange-600 mt-2">Just For You</span>
             </h1>
             <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
               Browse through hundreds of thoroughly inspected and verified used cars from trusted dealers across Nigeria
@@ -167,7 +167,7 @@ export default function Home() {
                   transition={{ duration: 0.5 }}
                   className="inline-block"
                 >
-                  <feature.icon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
+                  <feature.icon strokeWidth={1} className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 </motion.div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
