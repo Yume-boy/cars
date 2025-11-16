@@ -1,5 +1,7 @@
 import { Car, Mail, Phone, MapPin, Facebook, Twitter, Instagram } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../app/images/logo.png'
 
 export default function Footer() {
   return (
@@ -8,8 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <Car className="w-6 h-6 text-orange-600" />
-              <span className="text-xl font-bold text-white">VerifiedAutos</span>
+              <Image alt='logo' src={logo} width={100} height={50}/>
             </div>
             <p className="text-sm">
               Your trusted platform for buying and selling verified used cars in Nigeria.

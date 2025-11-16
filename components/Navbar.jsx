@@ -4,6 +4,8 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Car, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import logo from '../app/images/logo.png'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,9 +27,8 @@ export default function Navbar() {
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.5 }}
             >
-              {/* <Car className="w-8 h-8 text-orange-600" strokeWidth={1}/> */}
+              <Image alt='logo' src={logo} width={100} height={50}/>
             </motion.div>
-            <span className="text-xl font-bold text-gray-900">Filitech Autos</span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">

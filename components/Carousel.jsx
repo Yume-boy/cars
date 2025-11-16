@@ -39,7 +39,7 @@ export default function Carousel({ cars }) {
     if (!emblaApi) return;
     const autoplay = setInterval(() => {
       emblaApi.scrollNext();
-    }, 5000);
+    }, 500000);
     return () => clearInterval(autoplay);
   }, [emblaApi]);
 
