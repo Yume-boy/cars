@@ -32,15 +32,15 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>+234 800 123 4567</span>
+                <span>07080249484</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />
-                <span>info@verifiedautos.ng</span>
+                <span>FilitechAuto1@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <MapPin className="w-4 h-4" />
-                <span>Lagos, Nigeria</span>
+                <span>13 Fagbola Street, Off Elere Police Station, Agege, Lagos State, Nigeria.</span>
               </li>
             </ul>
           </div>
@@ -48,13 +48,13 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-4">Follow Us</h3>
             <div className="flex gap-4">
-              <a href="#" className="hover:text-orange-600 transition-colors">
+              <a href="https://www.facebook.com/Filitechauto" className="hover:text-orange-600 transition-colors">
                 <Facebook className="w-5 h-5" />
               </a>
-              <a href="#" className="hover:text-orange-600 transition-colors">
+              {/* <a href="#" className="hover:text-orange-600 transition-colors">
                 <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="hover:text-orange-600 transition-colors">
+              </a> */}
+              <a href="https://www.instagram.com/Filitechauto" className="hover:text-orange-600 transition-colors">
                 <Instagram className="w-5 h-5" />
               </a>
             </div>

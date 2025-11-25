@@ -166,5 +166,5 @@ export const carsData = [
       "https://images.pexels.com/photos/3752169/pexels-photo-3752169.jpeg"
     ],
     description: "Spacious family SUV with 7-seater capacity. Great for road trips and family outings."
-  }
+  },
 ];

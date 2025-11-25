@@ -5,8 +5,45 @@ import { CheckCircle, Shield, Clock, Users } from 'lucide-react';
 import Link from 'next/link';
 import Carousel from '@/components/Carousel';
 import { carsData } from '@/data/carsData';
+import { useState, useMemo } from 'react';
+import { useRouter } from 'next/navigation';
+import FilterBar from '@/components/FilterBar';
+
 
 export default function Home() {
+
+  const router = useRouter();
+
+  const [filters, setFilters] = useState({
+    make: '',
+    location: '',
+    minPrice: '',
+    maxPrice: '',
+  });
+
+  // 🔥 SAME LOGIC copied from CarsPage
+  const makes = useMemo(() => {
+    const uniqueMakes = new Set(carsData.map(car => car.make));
+    return Array.from(uniqueMakes).sort();
+  }, []);
+
+  const locations = useMemo(() => {
+    const uniqueLocations = new Set(carsData.map(car => car.location));
+    return Array.from(uniqueLocations).sort();
+  }, []);
+
+  const applyFilters = () => {
+    const query = new URLSearchParams();
+
+    if (filters.make) query.append("make", filters.make);
+    if (filters.location) query.append("location", filters.location);
+    if (filters.minPrice) query.append("minPrice", filters.minPrice);
+    if (filters.maxPrice) query.append("maxPrice", filters.maxPrice);
+
+    router.push(`/cars?${query.toString()}`);
+  };
+
+
   const featuredCars = carsData.filter(car => car.featured);
 
   const features = [
@@ -100,6 +137,8 @@ export default function Home() {
           </motion.div>
         </div>
 
+        
+
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2 }}
@@ -138,6 +177,21 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <div className='px-10'> 
+          <FilterBar
+            onFilter={setFilters}
+            makes={makes}
+            locations={locations}
+          />
+
+          <button
+            onClick={applyFilters}
+            className="mt-4 bg-orange-600 text-white px-6 py-3 rounded-lg"
+          >
+            Search Cars
+          </button>
+      </div>
 
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

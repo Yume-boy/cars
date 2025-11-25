@@ -64,7 +64,7 @@ export default function AboutPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl font-bold text-gray-900 mb-6">About VerifiedAutos</h1>
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">About Filitech Auto</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Your trusted partner in buying and selling verified used cars across Nigeria
           </p>
@@ -89,17 +89,12 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="flex flex-col justify-center"
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Who we are</h2>
             <p className="text-gray-600 mb-4 leading-relaxed">
-              VerifiedAutos was founded with a simple mission: to make buying and selling used cars
-              in Nigeria transparent, safe, and hassle-free. We understand the challenges buyers and
-              sellers face in the used car market, and we&apos;re here to change that.
+              Filitechauto is a trusted and modern car dealership committed to delivering high-quality vehicles and a smooth, transparent buying experience. We are a proud subsidiary of Filitech Technology Ltd, a registered Nigerian company known for innovation, digital excellence, and service reliability.
             </p>
             <p className="text-gray-600 leading-relaxed">
-              Our platform brings together verified dealers and quality vehicles, ensuring every
-              transaction is backed by thorough inspection, transparent pricing, and exceptional
-              customer service. We&apos;ve helped thousands of Nigerians find their perfect vehicle and
-              get fair value for their cars.
+              With the strong technological foundation of our parent company, Filitechauto combines automotive expertise with digital convenience—making car buying faster, easier, and more reliable for customers across Nigeria.
             </p>
           </motion.div>
         </div>
@@ -116,9 +111,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Our Mission</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                To revolutionize the used car market in Nigeria by providing a trusted platform
-                that connects buyers with quality verified vehicles and helps sellers get the
-                best value for their cars.
+                To simplify car buying through transparency, innovation, and exceptional customer service.
               </p>
             </motion.div>
 
@@ -133,8 +126,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-gray-900">Our Vision</h3>
               </div>
               <p className="text-gray-700 leading-relaxed">
-                To become Nigeria&apos;s most trusted automotive marketplace, known for transparency,
-                quality, and exceptional customer service, making car ownership accessible to everyone.
+                To be one of Nigeria’s leading technology-driven auto dealerships, recognized for quality vehicles, honesty, and customer satisfaction.
               </p>
             </motion.div>
           </div>
@@ -147,34 +139,129 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
-            <p className="text-gray-600 text-lg">The principles that guide everything we do</p>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">What We Offer</h2>
+            <p className="text-gray-600 text-lg">Exceptional services designed to give you the best car-buying experience</p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((value, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {[
+              {
+                title: "Verified Vehicle Sales",
+                desc:
+                  "We provide a curated selection of both locally used and foreign used cars, all thoroughly inspected to ensure value, durability, and peace of mind."
+              },
+              {
+                title: "Digital Convenience",
+                desc:
+                  "Easily browse available vehicles and make inquiries online via our platform.",
+                link: "https://www.filitechauto.com"
+              },
+              {
+                title: "Transparent & Trusted Processes",
+                desc:
+                  "We offer clear pricing, full documentation support, and honest guidance throughout the entire purchase process."
+              },
+              {
+                title: "After-Sales Support",
+                desc:
+                  "Filitechauto assists customers with maintenance guidance, ownership advice, and continuous after-sales support."
+              }
+            ].map((item, i) => (
               <motion.div
-                key={index}
+                key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="bg-white p-8 rounded-xl shadow-lg text-center"
+                transition={{ delay: i * 0.1 }}
+                className="p-8 bg-white rounded-xl shadow-lg"
               >
-                <motion.div
-                  whileHover={{ rotate: 360 }}
-                  transition={{ duration: 0.5 }}
-                  className="inline-block"
-                >
-                  <value.icon className="w-12 h-12 text-orange-600 mx-auto mb-4" />
-                </motion.div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                <p className="text-gray-600">{value.description}</p>
+                <h3 className="text-2xl font-semibold text-gray-900 mb-3">{item.title}</h3>
+                <p className="text-gray-600 mb-2">{item.desc}</p>
+                {item.link && (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    className="text-orange-600 font-medium underline"
+                  >
+                    {item.link}
+                  </a>
+                )}
               </motion.div>
             ))}
           </div>
         </div>
+
+        {/* WHY CUSTOMERS CHOOSE US */}
+        <div className="mb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-12"
+          >
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Customers Choose Filitechauto</h2>
+            <p className="text-gray-600 text-lg">The pillars behind our growing customer trust</p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              "Backed by Filitech Technology Ltd",
+              "Verified, high-quality vehicles",
+              "Transparent pricing with no hidden charges",
+              "Fast and professional customer support",
+              "Strong online presence",
+              "Experienced and trustworthy team"
+            ].map((reason, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="bg-orange-50 p-6 rounded-xl border border-orange-100"
+              >
+                <p className="text-gray-800 font-medium">{reason}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+
+        {/* UPDATED VALUES SECTION */}
+<div className="mb-20">
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    className="text-center mb-12"
+  >
+    <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Values</h2>
+    <p className="text-gray-600 text-lg">The principles that guide everything we do</p>
+  </motion.div>
+
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    {[
+      "Integrity",
+      "Innovation",
+      "Service Excellence",
+      "Accountability",
+      "Professionalism"
+    ].map((value, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: index * 0.1 }}
+        whileHover={{ y: -8 }}
+        className="bg-white p-8 rounded-xl shadow-lg text-center"
+      >
+        <h3 className="text-xl font-bold text-gray-900">{value}</h3>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

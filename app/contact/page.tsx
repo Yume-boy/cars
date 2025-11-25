@@ -52,19 +52,19 @@ export default function ContactPage() {
     {
       icon: Phone,
       title: 'Phone',
-      content: '+234 800 123 4567',
-      link: 'tel:+2348001234567'
+      content: '+23407080249484',
+      link: 'tel:+23407080249484'
     },
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@verifiedautos.ng',
-      link: 'mailto:info@verifiedautos.ng'
+      content: 'FilitechAuto1@gmail.com',
+      link: 'mailto:FilitechAuto1@gmail.com'
     },
     {
       icon: MapPin,
       title: 'Address',
-      content: '123 Victoria Island, Lagos, Nigeria',
+      content: '13 Fagbola Street, Off Elere Police Station, Agege, Lagos State, Nigeria.',
       link: null
     },
     {
